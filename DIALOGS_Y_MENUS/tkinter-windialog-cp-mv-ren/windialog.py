@@ -70,8 +70,9 @@ class CustomEntry(tk.Frame):
     label: tk.Label
     entry: tk.Entry
 
-    def __init__(self, parent, **tkargs):
-        super(CustomEntry, self).__init__(parent, **tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
 
         self.text_label = tk.StringVar(value="Label")
         self.text_entry = tk.StringVar(value="Entry")
@@ -94,8 +95,9 @@ class LabelEntryButton(tk.Frame):
     entry: tk.Entry
     button: tk.Button
 
-    def __init__(self, parent, **tkargs):
-        super(LabelEntryButton, self).__init__(parent, **tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
 
         self.text_label = tk.StringVar(value='Origen')
         self.text_entry = tk.StringVar(value='')
@@ -116,8 +118,10 @@ class FrameButtons(tk.Frame):
     btncancelar:tk.Button
     btnaceptar: tk.Button
 
-    def __init__(self, parent, **tkargs):
-        super(FrameButtons, self).__init__(parent, **tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
+
         self.btnaceptar = tk.Button(self, text='Aceptar')
         self.btncancelar = tk.Button(self, text='Cancelar')
         self.btnaceptar.pack(side=tk.RIGHT)
@@ -130,10 +134,11 @@ class OpenDialogRename(tk.Toplevel):
     name: tk.StringVar
     t: threading
 
-    def __init__(self, parent, **tkargs):
-        super(OpenDialogRename, self).__init__(parent, **tkargs)
-        # self.geometry('600x120')
-        # self.iconbitmap('collage.ico') # pathdir
+    def __init__(self, parent, *args, **kwargs):
+        tk.Toplevel.__init__(self, parent, *args, **kwargs)
+
+        self.geometry('600x120')
+        self.iconbitmap('collage.ico') # pathdir
         self.title('RENAME ...')
 
         padding = {'width': 400, 'height': 21, 'padx': 5, 'pady': 5}
@@ -207,10 +212,11 @@ class WindowCopyTo(tk.Toplevel):
     t: threading
     copy: bool
 
-    def __init__(self, parent, **tkargs):
-        super(WindowCopyTo, self).__init__(parent, **tkargs)
-        # self.geometry('600x120')
-        # self.iconbitmap('collage.ico') # pathdir
+    def __init__(self, parent, *args, **kwargs):
+        tk.Toplevel.__init__(self, parent, *args, **kwargs)
+        
+        self.geometry('600x120')
+        self.iconbitmap('collage.ico') # pathdir
         self.title('COPY ...')
         self.wm_protocol("WM_DELETE_WINDOW", self.handlefocus)
 
@@ -300,10 +306,10 @@ class WindowCopyTo(tk.Toplevel):
 
 
 class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent, *args, **kwargs):
+        tk.Tk.__init__(self, parent, *args, **kwargs)
         self.geometry('300x120')
-        # self.iconbitmap('collage.ico') # pathdir
+        self.iconbitmap('collage.ico') # pathdir
         self.title('Main Window')
 
         # place a button on the root window
@@ -320,13 +326,14 @@ class App(tk.Tk):
                    command=self.win_rn).pack(expand=True)
 
     def win_rn(self):
-        option = {'width': 600, 'height': 120}
-        window = OpenDialogRename(self, **option)
+
+        window = OpenDialogRename(self)
         window.file.set("E:\\Imagenes\\coronavirus.jfif")
         window.name.set("Nevo nombre")
         window.grab_set()
 
     def win_cp(self):
+
         option = {'width': 600, 'height': 120}
         window = WindowCopyTo(self, **option)
         # window.title('MOVER ...')
@@ -336,8 +343,8 @@ class App(tk.Tk):
         window.grab_set()
 
     def win_mv(self):
-        option = {'width': 600, 'height': 120}
-        window = WindowCopyTo(self, **option)
+
+        window = WindowCopyTo(self)
         window.title('MOVER ...')
         window.copy = False
         window.file.set("E:\\Imagenes\\coronavirus.jfif")

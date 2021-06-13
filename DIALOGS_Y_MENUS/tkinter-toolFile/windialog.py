@@ -70,8 +70,9 @@ class CustomEntry(tk.Frame):
     label: tk.Label
     entry: tk.Entry
 
-    def __init__(self, parent, **tkargs):
-        super().__init__(parent, tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
 
         self.text_label = tk.StringVar(value="Label")
         self.text_entry = tk.StringVar(value="Entry")
@@ -94,8 +95,9 @@ class LabelEntryButton(tk.Frame):
     entry: tk.Entry
     button: tk.Button
 
-    def __init__(self, parent, **tkargs):
-        super().__init__(parent, tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
 
         self.text_label = tk.StringVar(value='Origen')
         self.text_entry = tk.StringVar(value='')
@@ -116,8 +118,10 @@ class FrameButtons(tk.Frame):
     btncancelar:tk.Button
     btnaceptar: tk.Button
 
-    def __init__(self, parent, **tkargs):
-        super().__init__(parent, tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Frame.__init__(self, parent, *args, **kwargs)
+        self.parent = parent
+
         self.btnaceptar = tk.Button(self, text='Aceptar')
         self.btncancelar = tk.Button(self, text='Cancelar')
         self.btnaceptar.pack(side=tk.RIGHT)
@@ -130,8 +134,9 @@ class OpenDialogRename(tk.Toplevel):
     name: tk.StringVar
     t: threading
 
-    def __init__(self, parent, **tkargs):
-        super().__init__(parent, tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Toplevel.__init__(self, parent, *args, **kwargs)
+
         self.geometry('600x120')
         self.iconbitmap('collage.ico') # pathdir
         self.title('RENAME ...')
@@ -207,8 +212,9 @@ class WindowCopyTo(tk.Toplevel):
     t: threading
     copy: bool
 
-    def __init__(self, parent, **tkargs):
-        super().__init__(parent, tkargs)
+    def __init__(self, parent, *args, **kwargs):
+        tk.Toplevel.__init__(self, parent, *args, **kwargs)
+        
         self.geometry('600x120')
         self.iconbitmap('collage.ico') # pathdir
         self.title('COPY ...')
@@ -300,8 +306,8 @@ class WindowCopyTo(tk.Toplevel):
 
 
 class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent, *args, **kwargs):
+        tk.Tk.__init__(self, parent, *args, **kwargs)
         self.geometry('300x120')
         self.iconbitmap('collage.ico') # pathdir
         self.title('Main Window')
