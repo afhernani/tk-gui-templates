@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 import os
 import time
@@ -9,7 +9,7 @@ from tkinter.messagebox import showinfo
 
 __author__ = 'Hernani Aleman Ferraz'
 __email__ = 'afhernani@gmail.com'
-__apply__ = 'GUI tk - Progresswin'
+__apply__ = 'GUI tk - Progressbarwin'
 __version__ = '1'
 
 __all__ = ('Progresswin', 'Progressthreadwin')

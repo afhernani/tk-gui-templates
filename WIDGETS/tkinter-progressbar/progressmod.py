@@ -1,4 +1,7 @@
-﻿from tkinter import ttk
+﻿#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+from tkinter import ttk
 import tkinter as tk
 from tkinter.messagebox import showinfo
 

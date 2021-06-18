@@ -1,5 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
 import tkinter as tk
 from tkinter import ttk
+
+
 class App(tk.Tk):
     def __init__(self):
         tk.Tk.__init__(self)
@@ -14,7 +19,10 @@ class App(tk.Tk):
 
     def __create_child1(self):
         self.Child1Window = tk.Toplevel(master=self, width=100, height=100)
-        self.Child1WindowButton = ttk.Button(self.Child1Window, text='Focus Child2 window else create Child2 window', command=self.CheckForChild2)
+        self.Child1WindowButton = ttk.Button(self.Child1Window,
+                                             text='Focus Child2 window else create Child2 window',
+                                             command=self.CheckForChild2
+                                             )
         self.Child1WindowButton.pack()
 
     def __create_child2(self, givenarg):
@@ -35,6 +43,7 @@ class App(tk.Tk):
                 self.__create_child2(True)
         else:
             self.__create_child2(True)
+
 
 if __name__ == '__main__':
     App().mainloop()

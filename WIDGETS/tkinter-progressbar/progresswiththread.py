@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
 
 from tkinter import *
 from tkinter import ttk
@@ -24,6 +26,7 @@ def check_foo_thread():
         root.after(20, check_foo_thread)
     else:
         progressbar.stop()
+
 
 root = Tk()
 mainframe = ttk.Frame(root, padding="3 3 12 12")

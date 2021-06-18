@@ -19,7 +19,7 @@ __version__ = '1'
 
 __all__ = ('LabelEntryButton', 'FrameButtons',
            'WindowCopyTo', 'CustomEntry',
-           'WindowCopyTo', 'ToolFile')
+           'OpenDialogRename', 'ToolFile')
 
 
 class ToolFile(object):
@@ -138,7 +138,7 @@ class OpenDialogRename(tk.Toplevel):
         tk.Toplevel.__init__(self, parent, *args, **kwargs)
 
         self.geometry('600x120')
-        self.iconbitmap('collage.ico') # pathdir
+        # self.iconbitmap('collage.ico') # pathdir
         self.title('RENAME ...')
 
         padding = {'width': 400, 'height': 21, 'padx': 5, 'pady': 5}
@@ -190,13 +190,13 @@ class OpenDialogRename(tk.Toplevel):
         destino = join(dirname, name)
 
         if oldname != name:
-            t = threading.Thread(target=ToolFile.move,
+            self.t = threading.Thread(target=ToolFile.move,
                                  args=(origen,
                                        destino,
                                        )
                                  )
         showinfo(title="Renombrando ...", message=f"renombrando {origen} a {destino}")
-        t.start()
+        self.t.start()
         self.destroy()
         self.update()
 
@@ -216,7 +216,7 @@ class WindowCopyTo(tk.Toplevel):
         tk.Toplevel.__init__(self, parent, *args, **kwargs)
         
         self.geometry('600x120')
-        self.iconbitmap('collage.ico') # pathdir
+        # self.iconbitmap('collage.ico') # pathdir
         self.title('COPY ...')
         self.wm_protocol("WM_DELETE_WINDOW", self.handlefocus)
 
@@ -283,20 +283,20 @@ class WindowCopyTo(tk.Toplevel):
         destino = self.path_to_copy.get()
 
         if self.copy:
-            t = threading.Thread(target=ToolFile.copy,
+            self.t = threading.Thread(target=ToolFile.copy,
                                  args=(origen,
                                        destino,
                                        )
                                  )
             showinfo(title="copiando ...", message=f"copiando {name} a {destino}")
         else:
-            t = threading.Thread(target=ToolFile.move,
+            self.t = threading.Thread(target=ToolFile.move,
                                  args=(origen,
                                        destino,
                                        )
                                  )
             showinfo(title="moviendo ...", message=f"moviendo {name} a {destino}")
-        t.start()
+        self.t.start()
         self.destroy()
         self.update()
 
@@ -326,14 +326,14 @@ class App(tk.Tk):
                    command=self.win_rn).pack(expand=True)
 
     def win_rn(self):
-
+        """Action rename"""
         window = OpenDialogRename(self)
         window.file.set("E:\\Imagenes\\coronavirus.jfif")
         window.name.set("Nevo nombre")
         window.grab_set()
 
     def win_cp(self):
-
+        """Action copy file"""
         option = {'width': 600, 'height': 120}
         window = WindowCopyTo(self, **option)
         # window.title('MOVER ...')
@@ -343,13 +343,23 @@ class App(tk.Tk):
         window.grab_set()
 
     def win_mv(self):
-
+        """Action move file"""
         window = WindowCopyTo(self)
         window.title('MOVER ...')
         window.copy = False
         window.file.set("E:\\Imagenes\\coronavirus.jfif")
         window.path_to_copy.set("E:\\")
         window.grab_set()
+
+    def delete(self):
+        """action delete or remove file"""
+        from tkinter.messagebox import askyesno
+        url = "E:\\Imagenes\\coronavirus.jfif"
+        if os.path.isfile(os.path.abspath(url)):
+            answer = askyesno(title='Confirmation',
+                              message='Are you sure that you want to remove?')
+            if answer:
+                ToolFile.remove(os.path.abspath(url))
 
 
 if __name__ == "__main__":

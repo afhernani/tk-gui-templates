@@ -1,4 +1,7 @@
-﻿import tkinter as tk
+﻿#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+import tkinter as tk
 from tkinter import ttk
 
 # root window

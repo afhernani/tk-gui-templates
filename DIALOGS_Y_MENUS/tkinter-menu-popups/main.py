@@ -1,9 +1,15 @@
-﻿from tkinter import *
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+from tkinter import *
 from tooltipmenu import *
+from photos import Photos
 
 root = Tk()
 root.title('Right Click Menu')
-root.iconbitmap('collage.ico') # pathdir
+ph = Photos()
+root.wm_iconphoto(True, ph._appico)
+# root.iconbitmap('collage.ico') # pathdir
 root.geometry("500x500")
 
 # etiqueta.

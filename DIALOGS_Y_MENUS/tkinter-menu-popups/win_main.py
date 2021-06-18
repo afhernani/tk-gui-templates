@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
 # import os
@@ -12,6 +12,7 @@ from tkinter import ttk
 # from tkinter.messagebox import showerror, showinfo
 # import threading
 from tooltipmenu import createToolTipMenu
+from photos import Photos
 
 
 class App(tk.Tk):
@@ -22,7 +23,8 @@ class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.geometry('450x220')
-        self.iconbitmap('collage.ico') # pathdir
+        self.ph = Photos()
+        self.wm_iconphoto(True, self.ph._appico)
         self.title('Windows xample popups menu')
         self.initialize()
         self.bind('<Button-3>', self.my_popup)
