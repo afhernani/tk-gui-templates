@@ -13,6 +13,13 @@ from tkinter import ttk
 # import threading
 from tooltipmenu import createToolTipMenu
 from photos import Photos
+import os
+
+__author__ = 'Hernani Aleman Ferraz'
+__email__ = 'afhernani@gmail.com'
+__apply__ = 'win_main'
+
+__version__ = '0.0'
 
 
 class App(tk.Tk):
@@ -25,6 +32,10 @@ class App(tk.Tk):
         self.geometry('450x220')
         self.ph = Photos()
         self.wm_iconphoto(True, self.ph._appico)
+        if os.name == 'nt':
+            self.wm_iconbitmap(bitmap='collage.ico')
+        else:
+            self.wm_iconbitmap(bitmap='@collage.xbm')
         self.title('Windows xample popups menu')
         self.initialize()
         self.bind('<Button-3>', self.my_popup)

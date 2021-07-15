@@ -1,0 +1,42 @@
+div#container {
+    display: grid;
+    width: 95vw;
+    height: 95vh;
+    grid-template-areas:
+            'titl'
+            'navi'
+            'main';
+}
+
+div#main {
+    grid-area: main;
+    max-width: 95vw;
+}
+
+
+h1#name {
+    max-width: 95vw;
+    grid-area: titl;
+    margin-left: 4%;
+    font-size: 36px;
+}
+
+div#navigation {
+    grid-area: navi;
+    max-width: 95vw;
+}
+
+nav {
+    margin-top: 50px;
+}
+
+nav#primary a {
+    font-size: 26px;
+    margin-left: 4%;
+}
+
+nav#secondary a {
+    margin-left: 5%;
+    font-size: 24px;
+}
+

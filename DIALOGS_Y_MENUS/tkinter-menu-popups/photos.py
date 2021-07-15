@@ -4,7 +4,7 @@ try:
     from PIL import Image
 except ImportError:
     print('No se pudo cargar el modulo PIL')
-import os
+import os, sys
 
 __author__ = 'Hernani Aleman Ferraz'
 __email__ = 'afhernani@gmail.com'

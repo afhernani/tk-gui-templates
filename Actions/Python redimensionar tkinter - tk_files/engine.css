@@ -1,0 +1,1422 @@
+/* 
+
+*/
+
+form {  
+	padding-top: 0px;
+	padding-bottom: 0px;	
+	padding-right: 0px; 
+	padding-left: 0px; 
+	margin: 0px;
+}
+
+
+/* 
+ * ========================================
+ * Цитата и скрытый текст
+ * ========================================
+ */
+.title_quote {
+	border-bottom:0;
+	padding:0 10px;
+	line-height:30px;
+	font-size:14px;
+	color: #909090;
+    margin: 10px 0 -10px 0;
+}
+.quote{
+	color: #000;
+	text-align:justify;
+	border:2px solid #f5f5f5;
+	padding:20px;
+	list-style:none;
+	margin:10px 0;
+	border-left:2px solid #d3313e;
+	text-shadow:0 1px 1px #fff;
+	font-style:italic;
+}
+.quote a{
+	color:#d3313e;
+}
+.quote ul{
+	list-style:none;
+}
+/* ==================== Тег SPOILER */
+
+.title_spoiler {
+	background:#fafafa; 
+	padding: 5px;
+	clear:both;
+	font-size:12px;
+	border-bottom:1px solid #eee;
+}
+.text_spoiler {
+	color: #505050;
+	background:#f1f1f1;
+	padding: 20px;
+	clear:both;
+}
+.title_spoiler a{
+	color:#505050;
+	font-size:11px;
+}
+.title_spoiler img {
+	margin: 0; padding: 0;
+}
+/* 
+ * ========================================
+ * Teг CODE
+ * ========================================
+ */
+ 
+.scriptcode{
+	color: #202020;
+	text-align:left; 
+        border-left:2px solid #000; 
+	padding: 20px;
+	background:#e1e1e1;
+}
+
+/* 
+ * ========================================
+ * Календарь 
+ * ========================================
+ */
+.day-current {
+	
+	background:#d3313e !important;
+	font-weight:bold;
+	color:#fff !important;
+}
+.weekday-active-v {
+	color: #FF0000;
+	font-family:tahoma;
+	 font-size:11px;
+}
+.day-active-v {
+
+	color: #000000;
+	font-family:tahoma;
+	 font-size:11px;
+
+}
+.calendar {
+	 font-size:13px;
+	 width:300px;
+	line-height:20px;
+        border-collapse: collapse;
+        color: #ccc;
+        background: #000;
+}
+
+.calendar td{
+	font-size:12px;
+	text-decoration: none;
+	text-align:center;
+        line-height: 30px;
+}
+th.workday, th.weekday{
+    background: #d3313e !important;
+    color: #fff;
+}
+.day{
+}
+.weekday {
+	color: #fff;
+	font-family:verdana;
+	font-size:12px;
+	font-weight:bold;
+}
+.weekday-active {
+	color: #fff;
+	font-family:verdana;	
+}
+.day-active {
+	color: #fff;
+	font-family:verdana;
+	font-size:11px;
+}
+.day-active a,
+.day-active-v a
+ {
+	font-size:13px;
+	text-decoration: none;	
+	border:0;
+	display:block;
+        color:#ccc;
+        background: #202020;
+}
+.weekday-active a, .weekday-active-v a{
+    color: #fff;	
+	border:0;
+	display:block;
+        color:#fff;
+	font-size:13px;
+	text-decoration: none;
+        background: #202020;
+}
+.day-active a:hover,
+.weekday-active a:hover,
+.day-active-v a:hover,
+.weekday-active-v a:hover
+ {
+	color:#d3313e;
+        text-decoration: underline;
+}
+.monthlink{
+	color:#fff !important;
+	font-family:tahoma;
+	font-size:14px;
+	text-decoration: none;
+	padding:0 5px;
+}
+.monthlink a{
+	color:#fff;
+}
+.monthselect{
+	width:221px;
+        font-size: 24px;
+        color: #fff;
+        line-height: 30px;
+}
+.monthselect a{
+    font-size: 24px;
+    color: #fff;
+}
+/* 
+ * ========================================
+ * Рейтинг 
+ * ========================================
+ */
+
+.rating {
+
+		color: #909090;
+		font-family: Tahoma, helvetica, sans-serif;
+		font-size: 11px; 
+		height: 12px;
+		float:left;
+		text-align: left;
+		
+	}
+	.rating ul{		margin:0 !important;}
+	.unit-rating{
+		list-style:none;
+		margin: 0px;
+		padding:0px;
+		width: 60px;
+		height: 12px;
+		position: relative;
+		background: url('../dleimages/rating.png')  0 0 no-repeat;		
+	}
+	
+	.unit-rating li{
+	    text-indent: -90000px;
+		padding:0px;
+		margin:0px;
+		float: left;
+	}
+	.unit-rating li a{
+		display:block;
+		width:12px;
+		height: 12px;
+		text-decoration: none;
+		text-indent: -9000px;
+		z-index: 17;
+		position: absolute;
+		padding: 0px;
+	}
+	.unit-rating li a:hover{
+		background: url('../dleimages/rating.png') 0 -12px no-repeat;
+		z-index: 2;
+		left: 0px;
+	}
+	.unit-rating a.r1-unit{left: 0px;}
+	.unit-rating a.r1-unit:hover{width:12px;}
+	.unit-rating a.r2-unit{left:12px;}
+	.unit-rating a.r2-unit:hover{width: 24px;}
+	.unit-rating a.r3-unit{left: 24px;}
+	.unit-rating a.r3-unit:hover{width: 36px;}
+	.unit-rating a.r4-unit{left: 36px;}	
+	.unit-rating a.r4-unit:hover{width: 48px;}
+	.unit-rating a.r5-unit{left: 48px;}
+	.unit-rating a.r5-unit:hover{width: 60px;}
+	.unit-rating li.current-rating{
+	    
+		background: url('../dleimages/rating.png') 0 -24px no-repeat;
+		position: absolute;
+		height: 12px;
+		display: block;
+		text-indent: -9000px;
+		z-index: 1;
+		
+}
+
+/* 
+ * ========================================
+ * BB коды
+ * ========================================
+ */ 
+ /* различие bbcodes и bbcodes_poll исключительно в длине кнопки */
+/* класс bbcodes используем в списке персональных сообщений (pm.tpl)  и по умолчанию в модуле редактора сообщений*/
+.editor{
+	width:100%;
+	margin:0 auto;
+}
+.bbcodes {
+	background-color: transparent;
+	color:#909090;
+	padding: 2px 5px 0 5px;
+        text-decoration: none !important;
+        font-size: 13px;
+	line-height:18px;
+	display:inline-block;
+	border:1px solid #ccc;
+	transition:all .1s;
+}
+
+.bbcodes:hover{	
+	cursor:pointer;
+	color:#000;
+	border:1px solid #909090;	
+}
+.bbcodes_poll {
+	border:0;
+	margin-top:5px;
+	background:#eee;
+    background: linear-gradient(to top, #eee, #fff);    
+	color: #303030;
+	font-family:Tahoma, helvetica, sans-serif;
+	padding: 0px 4px 2px 4px;
+	font-size: 12px; 
+	height: 20px;
+	width:100px;
+	border:1px solid #ccc;
+}
+
+
+
+/* 
+ * ========================================
+ * Дополнительные поля новостей
+ * ========================================
+ */ 
+.xfields{
+	padding:2px	 5px;
+}
+.xfields b{
+	font-weight: normal;
+}
+.xfields textarea {
+    height: 186px;
+    margin: 0px 1px 0px 0px;
+    padding: 0px;
+
+}
+.xfields input {
+	width:250px; 
+	height:18px; 
+	font-family:verdana; 
+	font-size:11px; 
+}
+td.xfields select {
+	height:30px; 
+	font-size:12px; 
+        line-height: 30px;
+        border: 1px solid #ccc;
+        margin: 0;
+        padding: 5px 0;
+}
+
+#xfield_holder_pole{
+	width:600px !important;
+	float:left;
+	clear:none;
+}
+/* 
+ * ========================================
+ * Дополнительные поля профиля пользователей
+ * ========================================
+ */ 
+
+.xprofile textarea {
+    height: 186px;
+    margin: 0px 1px 0px 0px;
+    padding: 0px;
+}
+.xprofile input {
+	width:250px; height:18px; font-family:verdana; font-size:11px; border:1px solid #5BBFFF;
+}
+
+
+
+/* 
+ * ========================================
+ * Выпадающее меню
+ * ========================================
+ */ 
+
+#dropmenudiv {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	background:#fafafa;
+	line-height: 20px;
+	margin: 2px;
+	opacity: 0.85;
+	border:1px solid #ccc;
+	text-shadow:0 1px 1px #fff;
+	border-radius:3px;
+	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+#dropmenudiv a {
+	font-size:11px;
+	display: block;
+	text-indent: 3px;
+	text-decoration:none;
+	color: #303030;
+	padding: 1px 0;
+	margin: 1px;
+	font-weight: bold;
+}
+
+#dropmenudiv a:hover {
+	background:#fff;
+	color:#d3313e;
+	opacity: 0.99;
+}
+
+
+
+
+
+/* 
+ * ========================================
+ * Поиск по сайту и результаты поиска
+ * ========================================
+ */
+
+.search {
+	font-family: Verdana;
+	font-size: 12px;
+	color:#505050;
+	text-decoration:none;
+	padding:0;
+	}
+.search legend{
+	font-weight:bold;
+        font-size: 13px;
+}
+.textin {
+ 	height: 30px;
+ 	padding: 5px;
+ 	font-size: 12px;
+	color:#00002C;
+	text-decoration: none;
+	}
+
+.sresult  {
+	text-align: justify;
+	font-size:16px;
+	margin:0 0 20px 0;
+	font-weight:bold;
+}
+.fieldset {
+	background:#5BBFFF;
+	border:2px solid #5BBFFF;
+	text-align:left;
+	font:normal 12px;
+	width:180px;
+}
+.search fieldset{
+	padding: 2px 0;
+	border:0;
+}
+.search select{
+	margin:2px 0;
+	border:1px solid #d3d3d3;
+}
+.search input {
+	margin:2px;
+}
+.search input[type="checkbox"]{
+	margin: 0 10px 0 0;
+}
+.search #searchinput, .search #searchuser{
+	width: 95% !important;
+	height:30px;
+	background:#fff;
+	border:1px solid #ccc;
+	padding:0 5px;
+	font-size:12px;
+	box-shadow:inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.searchtable table {
+width: 100% !important;
+}
+/* ==================== показ оригинальной картинки загруженной на сайт из уменьшенной копии */
+.highslide-wrapper, .highslide-outline {
+	background: #FFFFFF;
+}
+.highslide-image {
+	border: 2px solid #FFFFFF;
+}
+.highslide-active-anchor {
+   visibility: hidden;
+}  
+.highslide-active-anchor img {
+	visibility: hidden;
+}
+.highslide-dimming {
+	background: black;
+}
+.highslide-html {
+	background-color: white;
+}
+.highslide-html-content {
+	display: none;
+}
+.highslide-loading {
+    display: block;
+	color: #ffffff;
+	font-size: 9px;
+	font-weight: bold;
+    text-decoration: none;
+	padding: 3px;
+	border: 1px solid #ffffff;
+    background-color: #000000;
+}
+a.highslide-full-expand {
+	background: url(../dleimages/fullexpand.gif) no-repeat;
+	display: block;
+	margin: 0 10px 10px 0;
+	width: 34px;
+	height: 34px;
+}
+.highslide-footer {
+	height: 11px;
+}
+.highslide-footer .highslide-resize {
+	float: right;
+	height: 12px;
+	width: 11px;
+	background: url(../dleimages/resize.gif);
+}
+.highslide-resize {
+    cursor: nw-resize;
+}
+.highslide-display-block {
+    display: block;
+}
+.highslide-display-none {
+    display: none;
+}
+.highslide-caption {
+	display: none;
+	padding: 5px;
+	background: white;
+}
+
+.highslide-controls {
+    width: 195px;
+    height: 40px;
+    background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif) 0 -90px no-repeat;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.highslide-controls ul {
+	position: relative;
+	left: 15px;
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif) right -90px no-repeat;
+}
+.highslide-controls li {
+    float: left;
+    padding: 5px 0;
+}
+.highslide-controls a {
+    background: url(../../../engine/classes/highslide/graphics/controlbar-black-border.gif);
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+    outline: none;
+}
+.highslide-controls a.disabled {
+    cursor: default;
+}
+.highslide-controls a span {
+    /* hide the text for these graphic buttons */
+    display: none;
+}
+ 
+/* The CSS sprites for the controlbar */
+.highslide-controls .highslide-previous a {
+    background-position: 0 0;
+}
+.highslide-controls .highslide-previous a:hover {
+    background-position: 0 -30px;
+}
+.highslide-controls .highslide-previous a.disabled {
+    background-position: 0 -60px !important;
+}
+.highslide-controls .highslide-play a {
+    background-position: -30px 0;
+}
+.highslide-controls .highslide-play a:hover {
+    background-position: -30px -30px;
+}
+.highslide-controls .highslide-play a.disabled {
+	background-position: -30px -60px !important;
+}
+.highslide-controls .highslide-pause a {
+    background-position: -60px 0;
+}
+.highslide-controls .highslide-pause a:hover {
+    background-position: -60px -30px;
+}
+.highslide-controls .highslide-next a {
+    background-position: -90px 0;
+}
+.highslide-controls .highslide-next a:hover {
+    background-position: -90px -30px;
+}
+.highslide-controls .highslide-next a.disabled {
+    background-position: -90px -60px !important;
+}
+.highslide-controls .highslide-move a {
+    background-position: -120px 0;
+}
+.highslide-controls .highslide-move a:hover {
+    background-position: -120px -30px;
+}
+.highslide-controls .highslide-full-expand a {
+    background-position: -150px 0;
+}
+.highslide-controls .highslide-full-expand a:hover {
+    background-position: -150px -30px;
+}
+.highslide-controls .highslide-full-expand a.disabled {
+    background-position: -150px -60px !important;
+}
+.highslide-controls .highslide-close a {
+    background-position: -180px 0;
+}
+.highslide-controls .highslide-close a:hover {
+    background-position: -180px -30px;
+}
+
+/* ==================== Облако тегов */
+.clouds_xsmall {
+	font-size: x-small;
+}
+.clouds_small {
+	font-size: small;
+}
+.clouds_medium {
+	font-size: medium;
+}
+.clouds_large {
+	font-size: large;
+}
+.clouds_xlarge {
+	font-size: x-large;
+}
+
+/* ==================== Информационное оконо загрузки AJAX */
+#loading-layer {
+	display:none;
+	font-family: Verdana;font-size: 11px;
+	background:#202020;
+	padding:10px;
+	text-align:center;
+	border:1px solid #e3e3e3;
+	color: #FFF;
+	border-radius: 5px;
+
+}
+/* ==================== Автозаполнение облака тегов */
+.ui-autocomplete { position: absolute; cursor: default; }
+ 
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+ 
+.ui-menu {
+            list-style:none;
+            padding: 2px;
+            margin: 0;
+            display:block;
+            float: left;
+}
+.ui-menu .ui-menu {
+            margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+            margin:0;
+            padding: 0;
+            zoom: 1;
+        float: left;
+            clear: left;
+            width: 100%;
+}
+.ui-menu .ui-menu-item a {
+            text-decoration:none;
+            display:block;
+            padding:.2em .4em;
+            line-height:1.5;
+            zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+            font-weight: normal;
+   
+}
+/* ==================== Быстрый поиск на сайте */
+#searchsuggestions { 
+	width:609px; 
+	max-width: 50%;
+	background-color:#303030; 
+	font-size:12px; 
+	line-height:14px; 
+	z-index:1000; 
+}
+#searchsuggestions a { 
+	padding:20px;
+	display:block;  clear:left; text-decoration:none; font-size:12px;line-height:14px;}
+#searchsuggestions a:hover { background-color:#404040; color:#ffffff; }
+#searchsuggestions a span.searchheading { 
+	display:block; 
+	font-family:"PT Sans Bold"; 
+	margin: 0 0 10px 0;
+	color:#ffffff; 
+	font-size: 14px;
+}
+#searchsuggestions a:hover span.searchheading { color:#ffffff; }
+#searchsuggestions a span {color:#aaa; }
+#searchsuggestions a:hover span { color:#0000; }
+#searchsuggestions span.seperator { float:right; padding-right:15px; margin-right:5px;}
+#searchsuggestions span.seperator a { background-color:transparent; display:block; height:auto; color:#ffffff; }
+#searchsuggestions span.seperator a:hover { 
+	background-color:#505050; 
+	display:block; height:auto; 
+	color:#ffffff; 
+}
+#searchsuggestions span.notfound { padding:10px;background-color:#505050; display:block; height:auto; color:#fff; }
+/* ==================== Диалоговые и всплывающие окна jQuery UI */
+.ui-helper-clearfix:after {
+clear: both;
+content: ".";
+display: block;
+height: 0;
+visibility: hidden;
+}
+.ui-helper-clearfix {
+display: inline-block;
+}
+* html .ui-helper-clearfix {
+height: 1%;
+}
+.ui-helper-clearfix {
+display: block;
+}
+.ui-icon {
+background-repeat: no-repeat;
+display: block;
+overflow: hidden;
+text-indent: -99999px;
+}
+.ui-widget {
+font-family: Tahoma, Lucida Sans, Arial, sans-serif;
+font-size: 11px;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+font-size: 13px;
+}
+.ui-widget-content {
+background:#fff;
+
+color:#303030 !important;
+}
+.ui-widget-content a {
+color: #d3313e;
+font-size:11px;
+}
+.ui-widget-header {
+background: #303030;
+color: #fff;
+font-family: "PT Sans Bold";
+font-size: 14px;
+line-height: 16px;
+}
+.ui-widget-header a {
+color: #d3313e;
+}
+.ui-state-default, .ui-widget-content .ui-state-default {
+    background-color:#f5f5f5;
+border:1px solid #ddd;
+color: #202020;
+
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+color: #fff;
+text-decoration: none;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+background-color: #e5e5e5;
+}
+.ui-state-hover a, .ui-state-hover a:hover {
+color: #1d5987;
+text-decoration: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+background-color: #d5d5d5 ;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+color: #e17009;
+text-decoration: none;
+}
+.ui-widget :active {
+outline: none;
+}
+.ui-state-error {
+background: #fef1ec 50% 50% repeat-x;
+border: 1px solid #cd0a0a;
+color: #cd0a0a;
+}
+.ui-widget-header .ui-icon {
+background-image: url(../images/ui-icons.png);
+}
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+background-image: url(../images/ui-icons_h.png);
+}
+.ui-icon-close {
+background-position: -80px -128px;
+}
+.ui-icon-closethick {
+background-position: -96px -128px;
+}
+.ui-button .ui-button-text {
+display: block;
+line-height: 1.4;
+}
+.ui-button-text-only .ui-button-text {
+padding: .4em .8em;
+}
+input.ui-button {
+padding: .4em 1em;
+}
+.ui-button-set {
+margin-right: 7px;
+}
+.ui-button-set .ui-button {
+margin-left: 0;
+margin-right: -.3em;
+}
+button.ui-button::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+.ui-dialog {
+overflow: hidden;
+position: absolute;
+box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
+}
+.ui-dialog .ui-dialog-titlebar {
+padding: 12px 15px;
+height: 40px;
+position: relative;
+}
+.ui-dialog .ui-dialog-title {
+float: left;
+margin: .1em 16px .2em 0;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+height: 18px;
+margin: -10px 0 0 0;
+padding: 1px;
+position: absolute;
+right: 10px;
+top: 50%;
+width: 19px;
+border-radius:3px;	
+}
+.ui-dialog .ui-dialog-titlebar-close span {
+display: block;
+}
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus {
+
+}
+.ui-dialog .ui-dialog-content {
+background: none;
+border: 0;
+overflow: hidden;
+padding:15px;
+position: relative;
+zoom: 1;
+}
+.ui-dialog #dleprofilepopup.ui-dialog-content{
+	padding: 0 !important;
+}
+.ui-dialog-content textarea{
+	margin: 20px;
+	margin:0 3%;
+	width: 94% !important;
+}
+.ui-dialog .ui-dialog-buttonpane {
+background-image: none;
+margin:0;
+text-align: left;
+padding: 15px 0 15px 15px;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+cursor: pointer;
+float: left;
+line-height: 20px;
+margin:0 15px 0 0;
+overflow: visible;
+padding: 5px 5px;	
+width: auto;
+}
+.ui-dialog .ui-resizable-se {
+bottom: 3px;
+height: 14px;
+right: 3px;
+width: 14px;
+}
+.ui-draggable .ui-dialog-titlebar {
+cursor: move;
+}
+
+/*---Подсветка кода в теге [code]---*/
+pre code {
+color: #202020;
+text-align:left; 
+border:1px solid #ddd;
+padding: 20px;
+background:#f1f1f1;
+font-size: 12px;
+display: block;
+overflow:auto;
+white-space: pre;
+}
+
+
+
+
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .lisp .title {
+  color: #859900;
+}
+
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+
+pre .title,
+pre .localvars,
+pre .function .title,
+pre .chunk,
+pre .decorator,
+pre .builtin,
+pre .built_in,
+pre .lisp .title,
+pre .identifier,
+pre .title .keymethods,
+pre .id {
+  color: #268bd2;
+}
+
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  font-weight: bold;
+}
+
+pre .attribute,
+pre .variable,
+pre .instancevar,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .label {
+  color: #b58900;
+}
+
+pre .preprocessor,
+pre .pi,
+pre .shebang,
+pre .symbol,
+pre .diff .change,
+pre .special,
+pre .keymethods,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata {
+  color: #cb4b16;
+}
+
+pre .deletion {
+  color: #dc322f;
+}
+
+pre .tex .formula {
+  background: #eee8d5;
+}
+
+/*---Вывод результатов голосования на сайте---*/
+.voteprogress {
+  overflow: hidden;
+  height: 15px;
+  margin-bottom: 5px;
+  background-color: #f1f1f1;
+  background-repeat: repeat-x;
+}
+
+.voteprogress span {
+  color: #ffffff;
+  text-align: center;
+  text-indent: -2000em;
+  height: 15px;
+  display: block;
+  overflow: hidden;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #0e90d2;
+}
+
+.voteprogress .vote2 {
+  background-color: #dd514c;
+}
+
+.voteprogress .vote3 {
+  background-color: #5eb95e;
+}
+
+.voteprogress .vote4 {
+  background-color: #4bb1cf;
+}
+
+.voteprogress .vote5 {
+  background-color: #faa732;
+}
+
+/*---Вывод результатов опросов в новостях---*/
+.pollprogress {
+  overflow: hidden;
+  height: 18px;
+  margin-bottom: 5px;
+  background-color: #f7f7f7;
+}
+
+.pollprogress span {
+  color: #ffffff;
+  height: 18px;
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #0e90d2;
+}
+
+.pollprogress .poll2 {
+  background-color: #dd514c;
+}
+
+.pollprogress .poll3 {
+  background-color: #5eb95e;
+}
+
+.pollprogress .poll4 {
+  background-color: #4bb1cf;
+}
+
+.pollprogress .poll5 {
+  background-color: #faa732;
+}
+
+/*---BB Редактор---*/
+
+.bb-pane { height: 1%; overflow: hidden; border: 1px solid #BBB;border-bottom: 0; background-color: #f5f5f5; }
+.bb-btn, .bb-sep { height: 25px; float: left; display: block; overflow: hidden; text-indent: -9999px; white-space: nowrap;
+background: url(../images/bbcodes.png) 0 0 no-repeat; }
+.bb-btn{ 
+	width: 23px;
+	overflow: hidden;	
+}
+.bb-sel { float: left; padding: 0 2px 0 2px; }
+.bb-sel select { font-size: 11px; }
+.bb-sep { width: 1px; background-position: -667px 0; }
+.bb-btn { cursor: pointer; width: 23px; }
+.bb-btn:hover{
+	opacity: 0.5;
+}
+
+#b_font { width: auto;}
+#b_size { width: 70px;}
+#b_font select { padding: 0px;}
+#b_size select { padding: 0px;}
+#b_b { background-position: 0 0;}
+#b_i { background-position: -23px 0; }
+#b_u { background-position: -46px 0; }
+#b_s { background-position: -69px 0; }
+#b_img { background-position: -92px 0; }
+#b_up { background-position: -115px 0; }
+#b_emo { background-position: -138px 0; }
+#b_url { background-position: -161px 0; }
+#b_leech { background-position: -184px 0; }
+#b_mail { background-position: -207px 0; }
+#b_video { background-position: -230px 0; }
+#b_audio { background-position: -253px 0; }
+#b_hide { background-position: -276px 0; }
+#b_quote { background-position: -299px 0; }
+#b_code { background-position: -322px 0; }
+#b_left { background-position: -391px 0; }
+#b_center { background-position: -414px 0; }
+#b_right { background-position: -437px 0; }
+#b_color { background-position: -460px 0; }
+#b_spoiler { background-position: -483px 0; }
+#b_fla { background-position: -506px 0; }
+#b_yt { background-position: -529px 0; }
+#b_tf { background-position: -552px 0; }
+#b_list { background-position: -575px 0; }
+#b_ol { background-position: -598px 0; }
+#b_tnl { background-position: -644px 0; }
+#b_br { background-position: -345px 0; }
+#b_pl { background-position: -368px 0; }
+
+.bb-editor textarea { 
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    padding: 2px; width: 100%; background: #fff ;
+	height: 156px;
+}
+.editorcomm .bb-editor { width: 465px;}
+.editorcomm .bb-editor textarea { height: 156px; }
+.bb-editor select{
+    height: 20px;
+}
+.clr {
+    clear: both;
+}
+
+/*---Выделение текста и всплывающее окно (поделиться ссылкой)---*/
+#marker-bar,
+#txtselect_marker {
+	display: block;
+	visibility: hidden;
+    position: absolute;
+    z-index: 1200;
+    opacity: 0;
+    -webkit-transition: opacity .4s, visibility .1s linear .4s;
+    -moz-transition: opacity .4s, visibility .1s linear .4s;
+    -o-transition: opacity .4s, visibility .1s linear .4s;
+    transition: opacity .4s, visibility .1s linear .4s;
+}
+#txtselect_marker {
+    cursor: pointer;
+    background:url(../dleimages/marker.png) -0px -0px no-repeat;
+}
+
+#txtselect_marker:hover {
+        background-position: -0px -32px;
+}
+
+#marker-bar{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #fff;
+    padding: 5px 10px;
+    cursor: default;
+    box-shadow: 0px 0px 4px #ccc;
+}
+
+#marker-bar.show {
+	-webkit-transition: opacity .4s, visibility 0s;
+	-moz-transition: opacity .4s, visibility 0s;
+	-o-transition: opacity .4s, visibility 0s;
+	transition: opacity .4s, visibility 0s;
+	opacity: 1;
+	visibility: visible;
+}
+
+#txtselect_marker.show {
+        /* XXX make a common css fadeIn/fadeOut classes */
+	visibility: visible;
+	width: 32px;
+	height: 32px;
+	-webkit-transition: opacity .4s, visibility 0s;
+	-moz-transition: opacity .4s, visibility 0s;
+	-o-transition: opacity .4s, visibility 0s;
+	transition: opacity .4s, visibility 0s;
+	opacity: 1;
+}
+
+#marker-bar .masha-social,
+#marker-bar .masha-marker{
+	cursor: pointer;
+	display: block;
+	margin: 0 5px;
+	float: left;
+}
+
+#marker-bar .masha-marker{
+	line-height: 1em;
+	color: #aaa;
+	border-bottom: 1px dotted #aaa;
+	margin-right: 10px;
+}
+
+#marker-bar .masha-marker:hover {
+	color: #ea3e26;
+	border-color: #ea3e26;
+}
+
+.user_selection, .user_selection_true {
+	background: #c4f47d;
+	padding: 2px 0;
+}
+.user_selection a.txtsel_close, .user_selection_true a.txtsel_close {
+	display:none;
+}
+.user_selection .closewrap, .user_selection_true .closewrap {
+	position: relative;
+}
+.user_selection.hover a.txtsel_close, .user_selection_true.hover a.txtsel_close {
+	display: inline-block;
+	position: absolute;
+	top: -7px;
+	left: -5px;
+	width: 33px;
+	height: 33px;
+	background: url(../dleimages/closemarker.png) -0px -0px no-repeat;
+}
+
+.user_selection.hover a.txtsel_close:hover, .user_selection_true.hover a.txtsel_close:hover {
+	background-position: -0px -33px;
+}
+
+
+#share-popup {
+	background: #fff;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	position: absolute;
+	width: 414px;
+	display:none;
+	z-index: 100;
+	padding: 10px 0;
+	opacity: 0;
+	-webkit-transition: opacity .4s, visibility .1s linear .4s;
+	-moz-transition: opacity .4s, visibility .1s linear .4s;
+	-o-transition: opacity .4s, visibility .1s linear .4s;
+	transition: opacity .4s, visibility .1s linear .4s;
+}
+
+#share-popup.show {
+	display:block;
+	opacity: 1;
+	-webkit-transition: opacity .4s, visibility 0s;
+	-moz-transition: opacity .4s, visibility 0s;
+	-o-transition: opacity .4s, visibility 0s;
+	transition: opacity .4s, visibility 0s;
+	opacity: 1;
+}
+
+#share-popup .social {
+	padding: 0 0 10px 17px;
+	height: 40px;
+}
+
+#share-popup .social p {
+	padding-bottom: 10px;
+	margin: 0;
+	font-weight: bold;
+}
+
+#share-popup .social ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#share-popup .social ul li {
+	float: left;
+	margin-right: 20px;
+	padding-top: 2px;
+	position: relative;
+}
+
+#share-popup .social ul a {
+	text-decoration: none;
+	font-size: 11px;
+	display: inline-block;
+	color: #aaa;
+	padding-left: 25px;
+}
+
+#share-popup .social ul a:hover {
+	text-decoration: underline;
+	color: #ea3e26;
+}
+
+#share-popup .social a span{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: url(../dleimages/social-icons.png) 20px 20px no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#share-popup .social .tw span{
+	background-position: 0 -20px;
+}
+
+#share-popup .social .tw:hover span{
+	background-position: 0 0;
+}
+
+#share-popup .social .fb span{
+	background-position: -20px -20px;
+}
+
+#share-popup .social .fb:hover span {
+	background-position: -20px 0;
+}
+
+#share-popup .social .vk span{
+	background-position: -40px -20px;
+}
+
+#share-popup .social .vk:hover span {
+	background-position: -40px 0;
+}
+
+#share-popup .social .gp span{
+	background-position: -60px -20px;
+}
+
+#share-popup .social .gp:hover span {
+	background-position: -60px 0;
+}
+
+#share-popup .link {
+	clear: both;
+	border-top: 1px solid #d9d9d9;
+	padding: 10px 5px 0 10px;
+	line-height: 1.2;
+	overflow: hidden;
+	margin: 0 7px;
+}
+
+#share-popup .link p {
+	font-weight: bold;
+	padding: 0 0 3px 0;
+	margin: 0;
+}
+
+#share-popup .link span {
+	color: #999;
+	font-size: 10px;
+	display: block;
+	padding-top: 3px;
+}
+
+#share-popup .link a {
+	display: block;
+}
+/*---Найденные похожие новости при добавлении новостей на сайте---*/
+.findrelated {
+	width:99%;
+	background: #ffc;border:1px solid #9E9E9E;
+	padding: 5px;margin-top: 7px;
+	margin-right: 10px;
+}
+
+
+
+.ratingzero {
+color: #6c838e;
+}
+
+.ratingtypeplusminus {
+padding: 0px 5px;
+}
+
+.ratingtypeplus {
+color: #6c838e;
+padding: 0px 0px 0px 5px;
+}
+
+.ratingplus {
+color: #5a7dab;
+}
+
+.ratingminus {
+color: red;
+}
+
+
+.ratebox2 {
+float: right;
+}
+
+.ratebox3 {
+float: right;
+}
+
+.ratebox ul, .ratebox ul li {
+float: left;
+}
+
+.ratebox2 ul, .ratebox2 ul li {
+float: left;list-style: none;
+}
+
+.ratebox3 ul, .ratebox3 ul li {
+float: left;
+list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+

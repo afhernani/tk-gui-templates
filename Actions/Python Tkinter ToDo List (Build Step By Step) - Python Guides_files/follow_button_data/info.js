@@ -1,0 +1,1 @@
+/**/__twttr.setFollowersCountAndFollowing([{"following":false,"id":"1246772437150093313","screen_name":"pythonguides","name":"Python Guides","protected":false,"followers_count":443,"formatted_followers_count":"443 followers","age_gated":false}]);

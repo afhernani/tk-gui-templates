@@ -1,0 +1,39 @@
+div#container {
+    display: grid;
+    width: 95vw;
+    height: 95vh;
+    grid-template-areas:
+            'titl main'
+            'navi main';
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 175px auto;
+}
+
+div#main {
+    grid-area: main;
+    margin-left: 3%;
+}
+
+h1#name {
+    grid-area: titl;
+    font-size: 40px;
+}
+
+div#navigation {
+    grid-area: navi;
+    font-size: 26px;
+}
+
+nav a {
+    display: block;
+    margin-top: 2%;
+}
+
+nav#secondary {
+    margin-top: 40px;
+    font-size: 24px;
+}
+
+nav#tertiary {
+    margin-top: 40px;
+}
